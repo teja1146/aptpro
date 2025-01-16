@@ -1,0 +1,7 @@
+# Ignore database configuration
+database.py
+.env
+
+# Ignore compiled files
+__pycache__/
+*.pyc
