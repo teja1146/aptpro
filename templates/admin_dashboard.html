@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <p>Manage users and roles.</p>
+    <a href="manage_roles.html">Manage Roles</a>
+    <br>
+    <a href="logout.html">Logout</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <p>Manage users and roles.</p>
+    
+    <h3>Registered Users</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Current Role</th>
+                <th>Assign Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example user list, this should be dynamically generated with data from the database -->
+            <tr>
+                <td>user1</td>
+                <td>user1@example.com</td>
+                <td>User</td>
+                <td>
+                    <form action="assign_role.py" method="POST">
+                        <select name="role" required>
+                            <option value="1">Admin</option>
+                            <option value="2">Manager</option>
+                            <option value="3" selected>User</option>
+                        </select>
+                        <input type="hidden" name="username" value="user1">
+                        <button type="submit">Assign</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>user2</td>
+                <td>user2@example.com</td>
+                <td>Manager</td>
+                <td>
+                    <form action="assign_role.py" method="POST">
+                        <select name="role" required>
+                            <option value="1">Admin</option>
+                            <option value="2" selected>Manager</option>
+                            <option value="3">User</option>
+                        </select>
+                        <input type="hidden" name="username" value="user2">
+                        <button type="submit">Assign</button>
+                    </form>
+                </td>
+            </tr>
+            <!-- You can generate more user rows dynamically based on the database -->
+
+        </tbody>
+    </table>
+
+    <br>
+    <a href="logout.html">Logout</a>
+</body>
+</html>
