@@ -11,10 +11,10 @@ cgitb.enable()
 
 # Connect to the database
 conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="priya",  # Make sure to use your actual database credentials
-    database="usersdb"
+    host="mysqldb-saitejagudupally-0b11.c.aivencloud.com",
+    user="avnadmin",
+    password="avnadmin",  # Make sure to use your actual database credentials
+    database="defaultdb"
 )
 cursor = conn.cursor()
 
