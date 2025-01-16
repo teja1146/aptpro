@@ -3,10 +3,10 @@ import cgi
 
 # Connect to the database
 conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="priya",
-    database="usersdb"
+    host="mysqldb-saitejagudupally-0b11.c.aivencloud.com",
+    user="avnadmin",
+    password="AVNS_3WEeQa5i0S91cC9VTUM",
+    database="defaultdb"
 )
 cursor = conn.cursor()
 
